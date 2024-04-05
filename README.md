@@ -3,7 +3,7 @@ addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass 
 
 [1. Introduction](#1-Introduction)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 What is addFeatures?](#11-What-is-addFeatures)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2 What can addFeatures be used for?](#12-What-can-addFeatures-be-used-for?)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2 What can addFeatures be used for?](#12-What-can-addFeatures-be-used-for)  
 [2. Installing addFeatures](#2-Installing-addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 Running addFeatures](#21-Running-addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2 Running addFeatures from within RStudio](#22-Running-addFeatures-from-within-RStudio)  
