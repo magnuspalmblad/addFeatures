@@ -4,17 +4,17 @@ addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass 
 [1. Introduction](#1-Introduction)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 What is addFeatures?](#11-What-is-addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2 What can addFeatures be used for?](#11-What_can_addFeatures_be_used_for)  
-[2. Installing addFeatures](#2-Installing-addFeatures)  
+[2. Installing addFeatures](#2-Installing_addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 Running addFeatures](#21_Running_addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2 Running addFeatures from within RStudio](#22-Running_addFeatures_from_within_RStudio)  
-[3. Using addFeatures](#3-Using-addFeatures)  
+[3. Using addFeatures](#3-Using_addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Selecting the feature file](#31-Selecting_the_feature_file)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.2 Selecting the SCiLS Lab dataset](#32-Selecting_the_SCiLS_Lab_dataset)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.3 Normalization](#33-Normalization)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.4 Renaming features](#34-Renaming_features)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.5 Adding total intensity](#35-Adding_total_intensity)  
 [4. Acknowledgements ](#4-Acknowledgements)  
-[5. Further reading](#5-Further-reading)  
+[5. Further reading](#5-Further_reading)  
 
 ## 1. Introduction
 
