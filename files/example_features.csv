@@ -1,0 +1,12 @@
+# Exported with SCiLS Lab Version 10.00.13097
+# Export time: 2023-04-05 06:07:08
+# Generated from file: D:\Data\cerebella.slx
+# Object Full Name: All Features
+# Object ID: 3dcab0e1-1f1a-479d-af9e-aa695fa65475
+# Object type: Static feature list
+# Object creation time: 2023-04-05 06:07:08
+#
+m/z;Interval Width (+/- Da);Color;Name
+3370.5;1.5;#fdbf6f;3370.5 +/- 1.5 Da
+3385;1.5;#999999;signal at m/z 3385
+3415.5;1.5;#eee685;highly discriminating feature
