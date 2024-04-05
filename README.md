@@ -64,7 +64,7 @@ Click on the "Select features (.csv) file" button and select the CSV file defini
 
 Next, click on the "Select SCiLS Lab .slx file" button and navigate to the SCiLS Lab dataset (SLX file). Make sure the actual data (SBD file) is in the same directory. Make sure the settings (checkboxes) are correct and click on "Add features as spot images" to add the defined features to the SCiLS Lab dataset. After completion, addFeatures will automatically close, to release the SCiLS Lab software license and the lock on the SCiLS Lab files. The SLX file can now be opened in SCiLS Lab proper. The features should now appear in the spot image list:
 
-![screenshot](./pictures/SCiLS Lab view.png)
+![SCiLS Lab view](./pictures/SCiLS Lab view.png)
 
 ### 3.3 Normalization
 
