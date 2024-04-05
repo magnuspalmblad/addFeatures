@@ -11,7 +11,7 @@ addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Selecting the feature file](#31-Selecting_the_feature_file)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.2 Selecting the SCiLS Lab dataset](#32-Selecting_the_SCiLS_Lab_dataset)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.3 Normalization](#33-Normalization)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.4 Renaming features](#34-Renaming features)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.4 Renaming features](#34-Renaming_features)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.5 Adding total intensity](#35-Adding_total_intensity)  
 [4. Acknowledgements ](#4-Acknowledgements)  
 [5. Further reading](#5-Further-reading)  
