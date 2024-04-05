@@ -54,11 +54,11 @@ addFeatures has a clean graphical user interface (GUI):
 
 ![screenshot](./pictures/addFeatures.png)
 
-Tooltips provide additional cues on the different elements of the GUI.
+Tooltips provide additional cues on the different elements of the GUI. Hover with the mouse pointer over a button to see what action it will trigger.
 
 ### 3.1 Selecting the feature file
 
-Click on the "Select features (.csv) file button and select the CSV file defining and naming the features for which you wish to add a spot image to the SCiLS Lab dataset.
+Click on the "Select features (.csv) file" button and select the CSV file defining and naming the features for which you wish to add a spot image to the SCiLS Lab dataset. This is a feature list exported from SCiLS Lab in the CSV format, with a metadata header followed by the features, each with four values in the four columns: "m/z", "Interval Width (+/- Da)", "Color" and "Name". "m/z" is the center of the feature m/z region (peak position). "Interval Width (+/- Da)" is half of the width of the feature (or peak), measured from the center. "Color" defines the color box in the list of spot images in SCiLS Lab. "Name" is an arbitrary string containing the name of the feature. If no name is provided, all features will be named "NA" in SCiLS Lab (see below for how to automatically (re)name the features).
 
 ### 3.2 Selecting the SCiLS Lab dataset
 
