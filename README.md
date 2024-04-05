@@ -62,7 +62,7 @@ Click on the "Select features (.csv) file" button and select the CSV file defini
 
 ### 3.2 Selecting the SCiLS Lab dataset
 
-Next, click on the "Select SCiLS Lab .slx file" button and navigate to the SCiLS Lab dataset (SLX file). Make sure the actual data (SBD file) is in the same directory. Make sure the settings (checkboxes) are correct and click on "Add features as spot images" to add the defined features to the SCiLS Lab dataset. After completion, addFeatures will automatically close, to release the SCiLS Lab software license and the lock on the SCiLS Lab files. The SLX file can now be opened in SCiLS Lab proper. The features should now appear in the spot image list:
+Next, click on the "Select SCiLS Lab .slx file" button and navigate to the SCiLS Lab dataset (SLX file). Make sure the actual data (SBD file) is in the same directory. Make sure the settings (checkboxes) are correct and click on "Add features as spot images" to add the defined features to the SCiLS Lab dataset. After completion, addFeatures will automatically close, to release the SCiLS Lab software license and the lock on the SCiLS Lab files. The SLX file can now be opened in SCiLS Lab proper. The features should now appear in the "Spot Images" list (here showing the [example features](files/example_features.csv) on the example cerebella dataset):
 
 ![SCiLS Lab view](./pictures/SCiLS_Lab_view.png)
 
