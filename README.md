@@ -8,8 +8,8 @@ addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 Running addFeatures](#21-Running-addFeatures)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2 Running addFeatures from within RStudio](#22-Running_addFeatures_from_within_RStudio)  
 [3. Using addFeatures](#3-Using-addFeatures)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Selecting the SCiLS Lab dataset](#31-Selecting_the_SCiLS_Lab_dataset)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.2 Selecting the feature file](#32-Selecting_the_feature_file)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Selecting the feature file](#31-Selecting_the_feature_file)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.2 Selecting the SCiLS Lab dataset](#32-Selecting_the_SCiLS_Lab_dataset)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.3 Normalization](#33-Normalization)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.4 Renaming features](#34-Renaming_features)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.5 Adding total intensity](#35-Adding_total_intensity)  
@@ -20,7 +20,7 @@ addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass 
 
 ### 1.1 What is addFeatures?
 
-addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass spectral features, also generated in SCiLS Lab and saved to a .csv file.
+addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass spectral features, also generated in SCiLS Lab and saved to a CSV file.
 
 ### 1.2 What can addFeatures be used for?
 
@@ -45,7 +45,7 @@ To run addFeatures, simply launch the software by running the batch file or doub
 
 ### 2.2 Running addFeatures from within RStudio
 
-It is also possible to run addFeatures from within RStudio. Simply launch RStudio and open the R script. Remember to use the same version of R compatible with the SCiLS Lab API
+It is also possible to run addFeatures from within RStudio. Simply launch RStudio and open the R script. Remember to use the same version of R compatible with the SCiLS Lab API. However, addFeatures is designed to be run from its graphical user interface, hiding the complexity of the R code from the user.
 
 
 ## 3. Using addFeatures
@@ -56,40 +56,31 @@ addFeatures has a clean graphical user interface (GUI):
 
 Tooltips provide additional cues on the different elements of the GUI.
 
-### 3.1 Selecting the SCiLS Lab dataset
+### 3.1 Selecting the feature file
 
-Click on the 
+Click on the "Select features (.csv) file button and select the CSV file defining and naming the features for which you wish to add a spot image to the SCiLS Lab dataset.
 
+### 3.2 Selecting the SCiLS Lab dataset
 
+Next, click on the "Select SCiLS Lab .slx file" button and navigate to the SCiLS Lab dataset (SLX file). Make sure the actual data (SBD file) is in the same directory.
 
-### 3.2 Calculating distance matrices
+### 3.3 Normalization
 
-Distance matrices are calculated using a separate executable, compareMS2_to_distance_matrices. This can also average the distances for multiple replicates per species for more accurate molecular phylogenetic analysis. For this, a tab-delimited file with filenames and species names are required. If no such file is provided, one is created automatically, using the filenames as sample "species". The distance matrix can currently be saved in the MEGA or Nexus formats. [MEGA](https://www.megasoftware.net/) is recommended for creating trees from compareMS2 results.
+To express all features as a fraction of the total intensity of all features for each pixel, check the "Normalize features to 1" box. This divides the intensity for each feature in each pixel by the sum of feature intensities for the pixel.
 
-### 3.3 Running compareMS2
+### 3.4 Renaming features
 
-After specifying the parameters, click on the "Start" button to run compareMS2 on all files in the specified directory. Alternatively, compareMS2 can be run on two specific files using the CLI version.
+If no names are provided in the feature (CSV) file, addFeatures will still add the features, but all names being "NA". To instead use the m/z midpoint as a name, tick the "(Re)name features by m/z" box. This will override any names provided in the CSV file.
 
-### 3.4 Molecular phylogenetics
+### 3.5 Adding total intensity
 
-We recommend [MEGA](https://www.megasoftware.net/) creating phylogenetic trees from compareMS2 results. However, most phylogenetic software can take distance matrices as input for UPGMA analysis. This was the original use for which compareMS2 was developed, see the [2012 paper](https://doi.org/10.1002/rcm.6162).
+To add a separate spot image containing the sum of all selected feature intensities in each pixel, check the "Include total intensity" box. This spot image is named "sum of all peaks", and can be found in the same spot image group "Peaks (normalized to 1)" as the images corresponding to individual features.
 
-### 3.5 Data quality control
-
-compareMS2 provides a very quick overview of large number of datasets to see if they cluster as expected or if there are outliers. Data of lower quality can thus be detected *before* running them through a data analysis pipeline and statistical analysis. It is not absolutely necessary to include all spectra in the analysis - major discrepancies should be detectable with ~1,000 spectra, if selected systematically. Similarly, compareMS2 can be used to determine the relative importance of factors in sample preparation and analysis, as shown in a [2016 paper](https://doi.org/10.1002/rcm.7494).
-
-In addition, compareMS2 collects metadata on each dataset (by default the number of tandem mass spectra) and visualizes this on top of the hierarcical clustering or phylogenetic tree.
-
-### 3.6 Experimental features
-
-Starting in version 2.0, we have begun to include experimental features in compareMS2. These are only available on the command line, but allow extraction of additional information from the comparisons, such as the distribution of similarity between tandem mass spectra as function of precursor mass measurement error, allowing identification of isotope errors and charge state distributions *before* any database search:
-
-![screenshot](./pictures/addFeatures.png)  
-Figure 2. Similarity (spectral angle from 0 to 1) of tandem mass spectra plotted against precursor *m*/*z* difference, revealing isotope errors up to at least 2 (corresponding to bands at *m*/*z* difference 2/3 and 2/5) and charge states up to 6 (corresponding to the band at *m*/*z* difference 1/6).
 
 ## 4. Acknowledgements
 
 The developer wish to thank Rob Marissen for help and support during the development of addFeatures.
+
 
 ## 5. Further reading
 
