@@ -148,6 +148,9 @@ runScriptOnFiles <- function() {
     
     # write a spot image for each defined m/z region (peak):
     for (i in 1:length(peaks$min)) {
+      if (tclvalue(renameState) == "1")
+        peaks$name[i] <-
+          as.character((peaks$min[i] + peaks$max[i]) / 2)
       if (tclvalue(normalizeState) == "1")
         writeScoreSpotImage(
           data,
@@ -174,7 +177,7 @@ runScriptOnFiles <- function() {
         )
     }
     
-    if (tclvalue(addSum) == "1")
+    if (tclvalue(addSumState) == "1")
       writeScoreSpotImage(
         data,
         name = "sum of all peaks",
@@ -191,9 +194,12 @@ runScriptOnFiles <- function() {
     Sys.sleep(1)
     unlink(temporary_directory, recursive = TRUE)
     
+    if (tclvalue(normalizeState) == "0") endMessage <- "Features have been added as spot images."
+    if (tclvalue(normalizeState) == "1") endMessage <- "Normalized features have been added as spot images."
+    
     # Display a confirmation message when done:
     tkmessageBox(
-      message = "Normalized features have been added as spot images.",
+      message = endMessage,
       title = "Confirmation",
       icon = "info",
       type = "ok"
@@ -388,11 +394,11 @@ tkgrid(
 )
 
 # Variable to hold the state of the checkbox (1 for checked, 0 for unchecked):
-addSum <- tclVar(1)
+addSumState <- tclVar(1)
 
 # Create a checkbox
 chkBox <-
-  tkcheckbutton(win, text = "Include total intensity", variable = addSum)
+  tkcheckbutton(win, text = "Include total intensity", variable = addSumState)
 
 tkgrid(
   chkBox,
