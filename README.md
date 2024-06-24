@@ -1,5 +1,5 @@
 # addFeatures
-addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass spectral features
+addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass spectral features.
 
 [1. Introduction](#1-Introduction)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 What is addFeatures?](#11-What-is-addFeatures)  
