@@ -28,11 +28,11 @@ addFeatures automates the otherwise tedious process of creating and naming spot 
 
 ## 2. Installing addFeatures
 
-To install addFeatures, simply download the R script and place it in an arbitrary folder, e.g. ```C:\Program Files\SCiLS Lab tools\addFeatures``` on a Windows system. Create a batch (.bat) file calling the R program with ```Rscript.exe``` for a version of R currently installed on your system that is compatible with the SCiLS Lab R API, e.g. R-4.1.2:
+To install addFeatures, simply download the R script and place it in an arbitrary folder, e.g. ```C:\Program Files\SCiLS Lab tools\addFeatures``` on a Windows system. Create a batch (.bat) file calling the R program with ```Rscript.exe``` for a version of R currently installed on your system that is compatible with the SCiLS Lab R API, e.g. R-4.3.2:
 
 ```
 @echo off
-"C:\Program Files\R\R-4.1.2\bin\Rscript.exe" "C:\Program Files\SCiLS Lab tools\addFeatures\addFeatures.R"
+"C:\Program Files\R\R-4.3.2\bin\Rscript.exe" "C:\Program Files\SCiLS Lab tools\addFeatures\addFeatures.R"
 pause
 ```
 
