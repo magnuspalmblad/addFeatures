@@ -81,7 +81,7 @@ To add a separate spot image containing the sum of all selected feature intensit
 
 ## 4. Acknowledgements
 
-The developer wish to thank Rob Marissen for help and support during the development of addFeatures.
+The developer wishes to thank Rob Marissen for help and support during the development of addFeatures.
 
 
 ## 5. Further reading
