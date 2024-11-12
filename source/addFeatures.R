@@ -93,20 +93,26 @@ updateFilePath <- function(id, path) {
 
 # Define function to be executed when the button is pressed:
 runScriptOnFiles <- function() {
+  # Use quotes around paths to allow spaces in paths and/or filenames:
+  file1 <- paste(file1, collapse = " ")
+  file2 <- paste(file2, collapse = " ")
+  file1 <- shQuote(file.path(file1))
+  file2 <- shQuote(file.path(file2))
   if (file1 != "" & file2 != "") {
     library(SCiLSLabClient)
     
+    datafile <- normalizePath(gsub('^"|"$', '', file2), winslash = "\\", mustWork = TRUE)
+    features_file <- normalizePath(gsub('^"|"$', '', file1), winslash = "\\", mustWork = TRUE)
+    
     # select image file:
     temporary_directory <- tempfile(pattern = "slxdir")
-    datafile <- file.path(file2)
     
     # start the local server session:
     data <- SCiLSLabOpenLocalSession(datafile, port = 8082)
     
     # import the feature list from a CSV file (saved from SCiLS Lab):
-    features_file <- file.path(file1)
     features <- read.csv(features_file, skip = 8, sep = ";")
-    
+     
     # get regions and coordinates from data:
     regTree <- getRegionTree(data)
     allRegions <- flattenRegionTree(regTree)
