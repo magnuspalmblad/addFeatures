@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/782599375.svg)](https://doi.org/10.5281/zenodo.15582367)
+
 # addFeatures
 addFeatures adds spot images to a SCiLS Lab dataset from a list of defined mass spectral features.
 
