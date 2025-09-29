@@ -108,7 +108,7 @@ runScriptOnFiles <- function() {
     temporary_directory <- tempfile(pattern = "slxdir")
     
     # start the local server session:
-    data <- SCiLSLabOpenLocalSession(datafile, port = 8082)
+    data <- SCiLSLabOpenLocalSession(datafile, port = 8082, timeout = 600)
     
     # import the feature list from a CSV file (saved from SCiLS Lab):
     features <- read.csv(features_file, skip = 8, sep = ";")
@@ -418,3 +418,4 @@ tkgrid(
 
 # Start the Tcl/Tk event loop:
 tkwait.window(win)
+
