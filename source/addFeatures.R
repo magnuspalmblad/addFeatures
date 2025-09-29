@@ -1,5 +1,5 @@
 #
-# addNormalizedFeatures.R
+# addFeatures.R
 #
 # MIT License
 #
@@ -418,4 +418,5 @@ tkgrid(
 
 # Start the Tcl/Tk event loop:
 tkwait.window(win)
+
 
