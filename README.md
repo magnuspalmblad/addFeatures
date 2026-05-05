@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/782599375.svg)](https://doi.org/10.5281/zenodo.15582367)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.15582367-blue)](https://doi.org/10.5281/zenodo.15582367)
 [![bio.tools](https://img.shields.io/badge/bio.tools-addFeatures-005472)](https://bio.tools/addFeatures)
 
 # addFeatures
